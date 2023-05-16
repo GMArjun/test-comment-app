@@ -1,26 +1,27 @@
 <template>
-  <div class="app-layout max-w-3xl mx-auto w-full text-sm min-h-screen flex flex-col">
+  <div class="app-layout max-w-3xl mx-auto w-full text-sm min-h-screen flex flex-col text-color-regular">
     <AppNav :title="$lang.TITLE" />
     <main>
+      <section class="sticky top-12 bg-white z-20">
+        <div class="flex gap-3 p-4">
+          <img src="@/assets/icons/profile_1.png" class="h-9 w-9 object-cover rounded-full" alt="profile-icon" />
+          <div class="flex gap-3 w-full items-center">
+            <div class="w-full">
+              <p class="flex flex-wrap items-center gap-x-1">
+                <span class="font-bold text-color-bold">안녕 나 응애</span>
+                <img src="@/assets/icons/tick.png" class="shrink-0 h-3.5" alt="profile-icon" />
+                <span class="shrink-0 text-xxs text-color-light">1일전</span>
+              </p>
+              <p class="text-xs text-color-light">165cm 165cm</p>
+            </div>
+            <button class="bg-color-primary shrink-0 text-white px-3 py-1 rounded-full">팔로우</button>
+          </div>
+        </div>
+      </section>
 
       <section>
-        <div class="p-4">
-          <div class="flex gap-3">
-            <img src="@/assets/icons/profile_1.png" class="h-9 w-9 object-cover rounded-full" alt="profile-icon" />
-            <div class="flex gap-3 w-full items-center">
-              <div class="w-full">
-                <p class="flex flex-wrap items-center gap-x-1">
-                  <span class="font-bold">안녕 나 응애</span>
-                  <img src="@/assets/icons/tick.png" class="shrink-0 h-3.5" alt="profile-icon" />
-                  <span class="text-xs shrink-0">1일전</span>
-                </p>
-                <p class="text-xs">165cm 165cm</p>
-              </div>
-              <button class="bg-primary shrink-0 text-white px-3 py-1 rounded-full">팔로우</button>
-            </div>
-          </div>
-
-          <div class="pt-4 grid gap-y-3">
+        <div class="p-4 pt-0">
+          <div class="grid gap-y-3">
             <p class="font-bold">지난 월요일에 했던 이벤트 중 가장 괜찮은 상품 뭐야?</p>
             <p>지난 월요일에 2023년 S/S 트렌드 알아보기 이벤트 참석했던 팝들아~
               혹시 어떤 상품이 제일 괜찮았어?</p>
@@ -89,8 +90,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 </style>

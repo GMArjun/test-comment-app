@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-slate-100 border border-slate-300 p-1 rounded-full px-3 uppercase">#{{value}}</div>
+    <div class="bg-slate-100 border border-slate-200 font-medium p-1 rounded-full px-3 uppercase text-color-grey">#{{value}}</div>
 </template>
   
 <script>

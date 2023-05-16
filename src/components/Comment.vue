@@ -15,7 +15,7 @@
                 </button>
             </div>
         </div>
-        <div class="pl-12 flex flex-col gap-4">
+        <div class="pl-12 flex flex-col gap-3">
             <div>
                 <p>어머 제가 있던 테이블이 제일 반응이 좋았나보네요🤭
                     우짤래미님도 아시겠지만 저도 일반인 몸매 그 이상도 이하도
@@ -25,11 +25,11 @@
                 <div class="flex gap-3 py-2 text-xs">
                     <button class="flex items-center gap-1 outline-none outline-none">
                         <img src="@/assets/icons/like.png" class="h-6 w-6" alt="like-icon" />
-                        <span>5</span>
+                        <span class="text-color-light">5</span>
                     </button>
                     <button class="flex items-center gap-1 outline-none">
                         <img src="@/assets/icons/comment.png" class="h-6 w-6" alt="comment-icon" />
-                        <span>10</span>
+                        <span class="text-color-light">10</span>
                     </button>
                 </div>
             </div>
