@@ -1,7 +1,10 @@
 <template>
     <div class="p-3 mt-auto sticky bottom-0 bg-white border-t border-b border-slate-100">
         <form class="flex items-center w-full gap-2">
-            <img src="@/assets/icons/imagesmode.png" class="h-6 w-6" alt="profile-icon" />
+            <div class="overflow-hidden relative">
+                <img src="@/assets/icons/imagesmode.png" class="h-6 w-6" alt="profile-icon" />
+                <input type="file" name="myfile" class="h-full w-full absolute left-0 top-0 opacity-0" accept="image/*" />
+            </div>
             <input type="text" class="grow outline-none	shadow-none px-2 py-1" placeholder="댓글을 남겨주세요.">
             <button type="submit" class="px-3 py-1 rounded-full shrink-0 text-color-light">등록</button>
         </form>

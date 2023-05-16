@@ -1,6 +1,6 @@
 <template>
   <div class="app-layout max-w-3xl mx-auto w-full text-sm min-h-screen flex flex-col text-color-regular">
-    <AppNav :title="$lang.TITLE" />
+    <AppNav :title="title" />
     <main>
       <section class="sticky top-12 bg-white z-20">
         <div class="flex gap-3 p-4">
@@ -44,13 +44,13 @@
 
       <section>
         <div class="p-4 flex flex-col gap-3">
-          <AppComment>
-            <AppComment />
-            <AppComment />
-          </AppComment>
-          <AppComment />
-          <AppComment />
-          <AppComment />
+          <template v-if="comments && comments.length">
+            <AppComment :commentData="comment" v-for="(comment, i) in comments" :key="i">
+              <template v-if="comment.replies && comment.replies.length">
+                <AppComment :commentData="comment" v-for="(comment, j) in comment.replies" :key="j" />
+              </template>
+            </AppComment>
+          </template>
         </div>
       </section>
 
@@ -66,6 +66,9 @@ import ImageSlider from "@/components/ImageSlider.vue"
 import AppComment from "@/components/Comment.vue"
 import Footer from "@/components/Footer.vue";
 
+// Mock
+import data from '@/mock/data.json';
+
 export default {
   name: 'App',
   components: {
@@ -77,12 +80,10 @@ export default {
   },
   data() {
     return {
-      tagData: ["2023", "Todayismonday", "Top", "Pops", "Wow", "Row"],
-      images: [
-        'https://wjddnjs754.cafe24.com/web/product/small/202303/5b9279582db2a92beb8db29fa1512ee9.jpg',
-        'https://images.bewakoof.com/t640/men-s-slim-fit-solid-stretch-stylish-new-trends-blue-denim-jeans-344941-1656188409-1.jpg',
-        'https://i.pinimg.com/originals/0c/aa/f3/0caaf3b6a90f6f0051736d28bdabbd5d.jpg'
-      ],
+      title: data.title,
+      tagData: data.tags,
+      images: data.images,
+      comments: data.comments
     }
   },
   methods: {
