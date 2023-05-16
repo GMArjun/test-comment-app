@@ -55,7 +55,7 @@
       </section>
 
     </main>
-    <Footer />
+    <Footer @onComment="handleComment" />
   </div>
 </template>
 
@@ -87,6 +87,15 @@ export default {
     }
   },
   methods: {
+    handleComment(userCommentDetails) {
+      this.comments = [...this.comments, userCommentDetails];
+      this.$nextTick(() => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: 'smooth'
+        });
+      })
+    }
   }
 }
 </script>

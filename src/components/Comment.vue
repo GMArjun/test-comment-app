@@ -27,7 +27,7 @@
                     </button>
                     <button class="flex items-center gap-1 outline-none">
                         <img src="@/assets/icons/comment.png" class="h-6 w-6" alt="comment-icon" />
-                        <span class="text-color-light">10</span>
+                        <span class="text-color-light">0</span>
                     </button>
                 </div>
             </div>
